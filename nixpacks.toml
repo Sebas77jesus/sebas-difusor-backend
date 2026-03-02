@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["chromium", "glib", "nss", "nspr", "atk", "cups", "libdrm", "mesa", "libxkbcommon", "pango", "cairo", "alsa-lib", "expat"]
+nixPkgs = ["chromium", "glib", "nss", "atk", "cups", "libdrm", "libxkbcommon", "pango", "cairo", "alsa-lib"]
 
 [variables]
 PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
