@@ -1,0 +1,7 @@
+[phases.setup]
+nixPkgs = ["chromium", "chromedriver"]
+
+[variables]
+CHROMIUM_PATH = "/run/current-system/sw/bin/chromium"
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
+PUPPETEER_EXECUTABLE_PATH = "/run/current-system/sw/bin/chromium"
