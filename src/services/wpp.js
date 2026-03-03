@@ -39,6 +39,10 @@ async function loadWatchedGroups() {
 async function initialize() {
   if (client) return;
   notifyStatus("connecting");
+  // Borrar archivo de bloqueo si existe
+  const sessionFolder = process.env.WPP_SESSION_FOLDER || "./wpp_sessions";
+  const lockFile = path.join(sessionFolder, "sebas-difusor", "SingletonLock");
+  if (fs.existsSync(lockFile)) { fs.unlinkSync(lockFile); console.log("🔓 Lock borrado"); }
 
   client = await wppconnect.create({
     session: "sebas-difusor",
